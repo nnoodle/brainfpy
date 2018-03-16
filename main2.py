@@ -1,5 +1,4 @@
-exec("""
-import sys,re
+exec("""import sys,re
 a,c,d,e,f,g,h=[],[],{},0,0,[0 for i in range(50)],sys
 for z in ''.join(filter(lambda x:x in '.,[]<>+-',re.sub('\\n','',open(h.argv[1],'r').read()))):a.append(z)
 for p,m in enumerate(''.join(a)):
@@ -15,5 +14,4 @@ Y'.':h.stdout.write(chr(K))
 Y',':K=ord(h.stdin.read(1))
 Y'[' and K==0:e=d[e]
 Y']' and K!=0:e=d[e]
-  e+=1
-""".replace('Y','  if m==').replace('K','g[f]'))
+  e+=1""".replace('Y','  if m==').replace('K','g[f]'))
