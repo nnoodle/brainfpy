@@ -1,19 +1,19 @@
+exec("""
 import sys,re
-o,c,f=sys,[],open(o.argv[1],'r')
-for e in ''.join(filter(lambda x:x in '.,[]<>+-',re.sub('\n','', f.read()))):c.append(e)
-_,b=[],{}
-for p,m in enumerate(''.join(c)):
-  if m=="[":_.append(p)
-  if m=="]":s=_.pop();b[s]=p;[p]=s
-e,d,p=[0 for i in range(9999)],0,0
-while d<len(c):
-  m=c[d]
-  if m=='>':p+=1
-  if m=='<':p-=1
-  if m=='+':e[p]+=1
-  ifm=='-':e[p]-=1
-  if m=='.':o.stdout.write(chr(e[p]))
-  if m==',':e[p]=ord(o.stdin.read(1))
-  if m=='[' and e[p]==0:d=b[d]
-  if m==']' and e[p]!=0:d=b[d]
-  d+=1
+a,c,d,e,f,g,h=[],[],{},0,0,[0 for i in range(50)],sys
+for z in ''.join(filter(lambda x:x in '.,[]<>+-',re.sub('\\n','',open(h.argv[1],'r').read()))):a.append(z)
+for p,m in enumerate(''.join(a)):
+Y'[':c.append(p)
+Y']':s=c.pop();d[s]=p;d[p]=s
+while e<len(a):
+  m=a[e]
+Y'>':f+=1
+Y'<':f-=1
+Y'+':K+=1
+Y'-':K-=1
+Y'.':h.stdout.write(chr(K))
+Y',':K=ord(h.stdin.read(1))
+Y'[' and K==0:e=d[e]
+Y']' and K!=0:e=d[e]
+  e+=1
+""".replace('Y','  if m==').replace('K','g[f]'))
