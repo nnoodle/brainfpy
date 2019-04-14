@@ -1,7 +1,26 @@
-exec("""import sys,re
-a,c,d,e,f,g,h=[],[],{},0,0,[0 for i in range(999)],sys
-for z in ''.join(filter(lambda x:x in'.,[]<>+-',re.sub('\\n','',open(h.argv[1],'r').read()))):a.append(z)
-for p,m in enumerate(''.join(a)):A[':c.append(p)A]':s=c.pop();d[s]=p;d[p]=s
-while e<len(a):
-  m=a[e]A>':f+=1A<':f-=1A+':g[f]+=1A-':g[f]-=1A.':h.stdout.write(chr(g[f]))A,':g[f]=ord(h.stdin.read(1))A[' and g[f]==0:e=d[e]A]' and g[f]!=0:e=d[e]
-  e+=1""".replace('A',"\n  if m=='"))
+import sys
+with open(sys.argv[1]) as s:
+    r=s.read()
+j=p=T=R=0
+t=[0]*999
+def S(fro,to):
+    global j,p,R
+    R+=j
+    if r[R]==fro:p+=1
+    elif r[R]==to:
+        if p!=0:p-=1
+        else:j=0
+while R<len(r):
+    c=r[R]
+    if j==1:S('[',']')
+    elif j==-1:S(']','[')
+    elif c=='['and t[T]==0:j=0
+    elif c==']'and t[T]!=0:j=-1
+    else:
+        if c=='.':print(chr(t[T]),end='')
+        if c==',':t[T]=ord(sys.read(1))
+        if c=='+':t[T]+=1
+        if c=='-':t[T]-=1
+        if c=='>':T+=1
+        if c=='<':T-=1
+        R+=1
