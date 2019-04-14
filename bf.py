@@ -53,5 +53,3 @@ while rptr < len(rom):
         rptr += 1
     if (ptr+2) > len(tape):
         tape = (tape + (ptr+1) * [0])[:(ptr+1)]
-
-print()
