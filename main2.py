@@ -1,5 +1,5 @@
 exec("""import sys
-with open(sys.argv[1]) as s:r=s.read()
+with open(sys.argv[1])as s:r=s.read()
 j=p=T=R=0
 t=[0]*999
 def S(P,Q):
