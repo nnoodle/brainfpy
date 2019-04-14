@@ -1,13 +1,19 @@
-# Brainfuck Interpreter
-An interpreter for Brainfuck written in Python.
-# Info
-main.py -> displays more info (1 528 bytes)
-main2.py -> same thing as main.py but doesnt display anything besides the code outputs (690 bytes)
-# Usage
+# brainfuck interpreter
+An brainfuck interpreter for written in Python 3.
+
+## info
+`bf.py` - a "readable" brainfuck interpreter
+
+`mbf.py` - minified `bf.py`
+
+## usage
+
+```shell
+python3 mbf.py FILE
 ```
-python main.py filename
-```
-Example with the included file.
-```
-python main.py hello_world.bf
+
+`mbf.py` is tested against the included `hello.bf`
+
+```shell
+python3 main.py hello.bf
 ```
